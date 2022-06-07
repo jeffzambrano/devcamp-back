@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 //TODO: add email verification
-const URL = "/magic/";
+const URL = "https://devcamp-front.vercel.app/magic/";
 
 const sendMagicLink = async (email, magicLink, type) => {
   if (type === "signup") {
