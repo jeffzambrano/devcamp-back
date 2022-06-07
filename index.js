@@ -18,10 +18,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(
   cors({
-    allowedHeaders: ["authorization", "Content-Type", "accept"], // you can change the headers
-    exposedHeaders: ["authorization"], // you can change the headers
-    origin: ["https://devcamp-front.vercel.app/"],
+    credentials: true,
+    origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 202,
   })
 );
 // app.use(function (req, res, next) {
