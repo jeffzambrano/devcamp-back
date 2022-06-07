@@ -18,18 +18,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(
   cors({
+    allowedHeaders: ["authorization", "Content-Type", "accept"], // you can change the headers
+    exposedHeaders: ["authorization"], // you can change the headers
     origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false
   })
 );
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Origin", "https://devcamp-front.vercel.app")
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Origin", "https://devcamp-front.vercel.app")
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 //routes
 app.use("/auth", authRoutes);
 app.use("/api", apiRoutes);
