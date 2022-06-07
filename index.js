@@ -20,9 +20,8 @@ app.use(
   cors({
     allowedHeaders: ["authorization", "Content-Type", "accept"], // you can change the headers
     exposedHeaders: ["authorization"], // you can change the headers
-    origin: "*",
+    origin: ["https://devcamp-front.vercel.app/"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false
   })
 );
 // app.use(function (req, res, next) {
