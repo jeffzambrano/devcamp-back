@@ -54,8 +54,8 @@ io.on("connection", (socket) => {
   console.log("a user connected");
 
   socket.on("join", (data) => {
-    const user = await User.findById(data.userId);
-    const group = await Group.findById(data.groupId);
+    const user = User.findById(data.userId);
+    const group = Group.findById(data.groupId);
     if (user && group) {
       socket.join(data.groupId);
       onlineUsers.set(data.userId, socket.id);
