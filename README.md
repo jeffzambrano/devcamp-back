@@ -13,6 +13,10 @@ Chat app with the following features:
 
 # To enter the chat app just use and email, and go to the link that is sent to your email.
 
+## To start the app:
+
+yarn start
+
 ## Technologies Frontend
 - React
 - Axios
