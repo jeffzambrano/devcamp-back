@@ -8,7 +8,11 @@ Chat app with the following features:
 - Chat in groups
 - Send messages
 - Logout function
+
+# The link to the app is the following: https://devcamp-front.vercel.app/
+
 # To enter the chat app just use and email, and go to the link that is sent to your email.
+
 ## Technologies Frontend
 - React
 - Axios
